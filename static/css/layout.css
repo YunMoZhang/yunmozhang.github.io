@@ -154,7 +154,7 @@ em {
 /* Mobile (480px or smaller) */
 @media screen and (max-width: 480px) {
   body {
-    font-size: 14px; /* Even smaller for mobile */
+    font-size: 15px; /* Even smaller for mobile */
     line-height: 1.5;
   }
 }

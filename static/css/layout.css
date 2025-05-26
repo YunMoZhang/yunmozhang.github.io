@@ -128,12 +128,12 @@ em {
     }
 
     body {
-        font-size: 14pt;
+        font-size: 12pt;
         line-height: 21pt;
     }
 
     .container > header {
-        font-size: 70%;
+        font-size: 80%;
         line-height: 160%;
     }
 

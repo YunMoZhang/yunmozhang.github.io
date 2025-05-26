@@ -143,6 +143,22 @@ em {
     }
 }
 
+/* Tablet (768px or smaller) */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px; /* Smaller for tablets */
+    line-height: 1.4; /* Better line spacing */
+  }
+}
+
+/* Mobile (480px or smaller) */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px; /* Even smaller for mobile */
+    line-height: 1.5;
+  }
+}
+
 footer p {
     margin-bottom: 10px;
     font-size: 10pt;

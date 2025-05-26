@@ -146,7 +146,7 @@ em {
 /* Tablet (768px or smaller) */
 @media screen and (max-width: 768px) {
   body {
-    font-size: 16px; /* Smaller for tablets */
+    font-size: 17px; /* Smaller for tablets */
     line-height: 1.4; /* Better line spacing */
   }
 }
@@ -154,7 +154,7 @@ em {
 /* Mobile (480px or smaller) */
 @media screen and (max-width: 480px) {
   body {
-    font-size: 15px; /* Even smaller for mobile */
+    font-size: 16px; /* Even smaller for mobile */
     line-height: 1.5;
   }
 }

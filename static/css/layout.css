@@ -143,7 +143,7 @@ em {
     }
 }
 
-/* Tablet (768px or smaller) */
+/* /* Tablet (768px or smaller) */
 @media screen and (max-width: 768px) {
   body {
     font-size: 17px; /* Smaller for tablets */
@@ -157,7 +157,7 @@ em {
     font-size: 16px; /* Even smaller for mobile */
     line-height: 1.5;
   }
-}
+} */
 
 footer p {
     margin-bottom: 10px;

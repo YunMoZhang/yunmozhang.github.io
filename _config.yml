@@ -7,30 +7,30 @@ paginate: 5
 plugins: [jekyll-paginate]
 port: 4000
 safe: true
-url: http://yunmozhang.github.io
+url: https://yunmozhang.github.io
 author: Yunmo Zhang
 
 # edit this section with your information
 # jekyllt.github.io - all contents run on /vitae/
 # for a normal use at the base of the server change it to "/"
 baseurl: /
-title: Yunmo Zhang
+title: Yunmo Zhang's Personal Web Page
 name: Yunmo Zhang
 email: yunmo.zhang@my.cityu.edu.hk
 email_full: mailto:yunmo.zhang@my.cityu.edu.hk
 website: yunmozhang.github.io
-# website_full: https://jekyllt.github.io/sustain
+website_full: https://yunmozhang.github.io
 github: yunmozhang
 # twitter: twitter
 # tel: +44 0000 000000
-tel_full: tel:+440000000000
+# tel_full: tel:+440000000000
 # google_maps: 'https://www.google.co.uk/maps/place/44+Perth+St,+Edinburgh,+Edinburgh+City+EH3+5BL'
 address:
   street: 44 Perth Street
   postcode: EH3 5BL
   city: Edinburgh
   country: United Kingdom
-google_analytics: UA-69300817-1
+# google_analytics: UA-69300817-1
 
 # needed for travis-ci build
 exclude: [vendor]

@@ -25,8 +25,8 @@
 <body>
 <div class="container">
     <!-- <header class="three columns"> -->
-    <header class="main-header">
-    <div class="header-text-container">
+    <header class="twelve columns" style="display: flex; align-items: flex-start; justify-content: space-between; width: 100%; margin-bottom: 20px;">
+    <div style="flex: 1;">
         <h1 style="color: #3d7e5e">{{ site.name }} </h1>
         <p>
             <a href="{{ site.tel_full }}">{{ site.tel }}</a>
@@ -69,9 +69,9 @@
     </details>
     </div>
 
-         <div class="header-photo-container">
-        <img src="{{ site.baseurl }}static/img/profile2.jpg" 
-            class="profile-rect">
+         <div style="margin-left: 20px; margin-right: 50px;"> <img src="{{ site.baseurl }}static/img/profile2.jpg" 
+             style="width: 170px; height: auto; border-radius: 0; border: 1px solid #ddd; padding: 5px;">
+        </div>
         </div>
     </header>
     <div class="thirteen columns clearfix">

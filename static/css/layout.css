@@ -159,6 +159,19 @@ em {
   }
 } */
 
+@media only screen and (max-width: 767px) {
+    .main-header {
+        flex-direction: column-reverse; 
+        align-items: center;
+        text-align: center;
+    }
+    .header-photo-container {
+        margin: 0 0 20px 0;
+    }
+    .profile-rect {
+        width: 130px;
+    }
+}
 footer p {
     margin-bottom: 10px;
     font-size: 10pt;

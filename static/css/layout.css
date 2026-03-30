@@ -156,6 +156,15 @@ em {
   body {
     font-size: 16px; /* Even smaller for mobile */
     line-height: 1.5;
+    
   }
-} */
+    .container > header {
+    display: flex;
+    flex-direction: column;
+  }
+  .container > header img {
+    order: -1 !important;
+    margin-bottom: 20px;
+  }
+}
 

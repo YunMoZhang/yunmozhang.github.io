@@ -9,10 +9,16 @@
 
         /* 论文标题链接：纯黑 + 加粗（继承原字体大小、行高） */
         h5 span[style*="background-color"] a,
-        h5 a {
+        /* h5 a {
             color: #000000 !important;
             font-weight: bold !important;
             /* 保留原有的 text-decoration，不额外设置 */
+        } */
+        h5 {
+            font-size: 1rem;          /* 与普通段落一致 */
+            font-weight: normal;      /* 去掉 h5 自带的加粗 */
+            margin-bottom: 0.25rem;   /* 标题与作者之间更紧凑 */
+            margin-top: 0;
         }
 
         /* 悬停变绿 */

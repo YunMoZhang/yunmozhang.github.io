@@ -14,17 +14,31 @@
             font-weight: bold !important;
             /* 保留原有的 text-decoration，不额外设置 */
         } */
-        h5 {
+        /* h5 {
             font-size: 1rem;          /* 与普通段落一致 */
             font-weight:  bold;      /* 去掉 h5 自带的加粗 */
             margin-bottom: 0.25rem;   /* 标题与作者之间更紧凑 */
             margin-top: 0;
+        } */
+
+        h5 a {
+            color: #000000 !important;
+            font-weight: bold !important;
+            text-decoration: none !important;           /* 去掉原来的粗下划线 */
+            border-bottom: 1px solid #000000;           /* 细下划线，颜色纯黑 */
+            padding-bottom: 1px;                        /* 让下划线稍贴近文字（可选） */
+        }
+        
+        /* 悬停时文字和下划线都变绿 */
+        h5 a:hover {
+            color: #27A822 !important;
+            border-bottom-color: #27A822;
         }
 
         /* 悬停变绿 */
-        h5 a:hover {
+        /* h5 a:hover {
             color: #27A822 !important;
-        }
+        } */
 
         /* 会议缩写：纯黑 + 加粗 + 去斜体 */
         p span,

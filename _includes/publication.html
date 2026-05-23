@@ -42,8 +42,15 @@
             border-bottom-color: #27A822 !important;
         }
 
+        article p {
+            margin-top: 0 !important;
+            margin-bottom: 12px !important;            /* 加大作者、会议、Paper/Slides 彼此之间的行间距 */
+        }
+        article p:last-child {
+            margin-bottom: 35px !important;            /* 加大两篇不同论文（大模块）之间的总间距，保持结构清晰 */
+        }
 
-        /* 2. 会议缩写（如 PACT、ATC）：纯黑 + 加粗 + 去斜体 */
+        /* 2. 会议缩写：纯黑 + 加粗 + 去斜体 */
         p span,
         p span em,
         p span b {

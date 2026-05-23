@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications | Yunmo Zhang</title>
-   <style>
-        /* ========== 覆盖样式 – 修复加粗并微调层次 ========== */
+  <style>
+        /* ========== 覆盖样式 – 修复加粗、字号与悬停变色 ========== */
 
         /* 1. 论文标题外层 h5：强行负责加粗与字号放大，避开 a:visited 限制 */
         h5 {
@@ -24,19 +24,21 @@
             padding-bottom: 1px;                        /* 让下划线稍微贴近文字 */
         }
         
-        /* 即使链接被点击访问过，也确保颜色纯黑（同时继承 h5 的稳固加粗） */
+        /* 即使链接被点击访问过，也确保颜色纯黑 */
+        h5 span[style*="background-color"] a:visited,
         h5 a:visited {
             color: #000000 !important;
         }
 
-        /* 悬停时：文字和下划线都完美变绿 */
+        /* 【修复核心】提高悬停权重：文字和下划线在悬停时完美变绿 */
+        h5 span[style*="background-color"] a:hover,
         h5 a:hover {
             color: #27A822 !important;
-            border-bottom-color: #27A822;
+            border-bottom-color: #27A822 !important;
         }
 
 
-        /* 2. 会议缩写：纯黑 + 加粗 + 去斜体 */
+        /* 2. 会议缩写（如 PACT、ATC）：纯黑 + 加粗 + 去斜体 */
         p span,
         p span em,
         p span b {

@@ -5,88 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications | Yunmo Zhang</title>
     <style>
-        /* ========== 全局重置 & 基础样式 ========== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* ========== 极简覆盖 – 只改颜色和加粗，绝不碰字体大小/族 ========== */
 
-        body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            line-height: 1.5;
-            color: #111;
-            background-color: #fff;
-            padding: 2rem 1rem;
-        }
-
-        /* 十三列布局（与你主页风格保持一致） */
-        .thirteen.columns {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        h1 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        h4 {
-            font-size: 1.3rem;
-            font-weight: 500;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        article {
-            margin-bottom: 2rem;
-        }
-
-        h5 {
-            font-size: 1.1rem;
-            font-weight: normal;
-            margin-bottom: 0.5rem;
-            line-height: 1.4;
-        }
-
-        /* 论文标题：保留绿色背景 + 下划线，同时让链接变成纯黑 + 加粗 */
+        /* 论文标题链接：纯黑 + 加粗（继承原字体大小、行高） */
         h5 span[style*="background-color"] a,
         h5 a {
-            color: #000000 !important;      /* 纯黑色 */
-            font-weight: bold !important;   /* 加粗 */
-            text-decoration: underline;     /* 与原有下划线风格统一 */
-            text-decoration-thickness: 1px;
-            text-underline-offset: 2px;
+            color: #000000 !important;
+            font-weight: bold !important;
+            /* 保留原有的 text-decoration，不额外设置 */
         }
 
-        /* 鼠标悬停时下划线变细或取消，保持可读性 */
+        /* 悬停变绿 */
         h5 a:hover {
-            text-decoration: none;
+            color: #27A822 !important;
         }
 
-        /* 会议缩写：统一纯黑 + 加粗 + 去除斜体（如果是<em>） */
+        /* 会议缩写：纯黑 + 加粗 + 去斜体 */
         p span,
         p span em,
         p span b {
             color: #000000 !important;
             font-weight: bold !important;
-            font-style: normal !important;   /* 强制取消斜体 */
+            font-style: normal !important;
         }
 
-        /* 确保作者列表中的加粗（自己的名字）依然有效 */
-        strong {
-            font-weight: 700;
-            color: #000;
-        }
-
-        /* 会议日期行（灰色部分）的普通文字颜色保持原样，但内部 span 已单独处理 */
-        p[style*="color: #808080"] {
-            color: #808080;
-        }
-
-        /* 论文链接（Paper / Slides）样式 —— 简洁、纯黑、悬浮有反馈 */
+        /* Paper / Slides 链接：默认纯黑，悬停变绿，带细下划线（不影响大小） */
         p a {
             color: #000000;
             text-decoration: none;
@@ -94,36 +37,37 @@
             transition: border-color 0.2s, color 0.2s;
         }
         p a:hover {
-            border-bottom-color: #000;
-            color: #000;
+            color: #27A822 !important;
+            border-bottom-color: #27A822;
         }
 
-        /* color after visiting: keep black */
+        /* 保证作者加粗正常 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 保持灰色会议日期不变 */
+        p[style*="color: #808080"] {
+            color: #808080;
+        }
+
+        /* 链接访问后颜色保持黑色（悬停才变绿） */
         a:visited {
             color: #000000;
         }
+        h5 a:visited {
+            color: #000000 !important;
+        }
 
-        /* hr line */
+        /* 绿色装饰线不动 */
+        h4[style*="color: #27A822"] {
+            color: #27A822 !important;
+        }
         hr {
             border: none;
             border-top: 1px solid #27A822;
             width: 100%;
             margin: 0 0 20px 0;
-        }
-
-        /* keep original green title */
-        h4[style*="color: #27A822"] {
-            color: #27A822 !important;
-        }
-
-        /* mobile */
-        @media (max-width: 600px) {
-            .thirteen.columns {
-                padding: 0 16px;
-            }
-            h5 {
-                font-size: 1rem;
-            }
         }
     </style>
 </head>

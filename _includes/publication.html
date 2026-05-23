@@ -4,43 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications | Yunmo Zhang</title>
-    <style>
-        /* ========== 极简覆盖 – 只改颜色和加粗，绝不碰字体大小/族 ========== */
+   <style>
+        /* ========== 覆盖样式 – 修复加粗并微调层次 ========== */
 
-        /* 论文标题链接：纯黑 + 加粗（继承原字体大小、行高） */
-        h5 span[style*="background-color"] a,
-        /* h5 a {
-            color: #000000 !important;
+        /* 1. 论文标题外层 h5：强行负责加粗与字号放大，避开 a:visited 限制 */
+        h5 {
             font-weight: bold !important;
-            /* 保留原有的 text-decoration，不额外设置 */
-        } */
-        /* h5 {
-            font-size: 1rem;          /* 与普通段落一致 */
-            font-weight:  bold !important;      /* 去掉 h5 自带的加粗 */
-            margin-bottom: 0.5rem;   /* 标题与作者之间更紧凑 */
-            margin-top: 0;
-        } */
+            font-size: 18.5px !important;              /* 微调放大，拉开与下方正文的差距 */
+            line-height: 1.4 !important;               /* 优化多行标题的行间距 */
+            margin-bottom: 6px !important;             /* 标题与作者之间稍微留点空隙 */
+        }
 
+        /* 论文标题链接：纯黑、继承 h5 的加粗与字号 */
+        h5 span[style*="background-color"] a,
         h5 a {
             color: #000000 !important;
-            font-weight: bold !important;
             text-decoration: none !important;           /* 去掉原来的粗下划线 */
             border-bottom: 1px solid #000000;           /* 细下划线，颜色纯黑 */
-            padding-bottom: 1px;                        /* 让下划线稍贴近文字（可选） */
+            padding-bottom: 1px;                        /* 让下划线稍微贴近文字 */
         }
         
-        /* 悬停时文字和下划线都变绿 */
+        /* 即使链接被点击访问过，也确保颜色纯黑（同时继承 h5 的稳固加粗） */
+        h5 a:visited {
+            color: #000000 !important;
+        }
+
+        /* 悬停时：文字和下划线都完美变绿 */
         h5 a:hover {
             color: #27A822 !important;
             border-bottom-color: #27A822;
         }
 
-        /* 悬停变绿 */
-        /* h5 a:hover {
-            color: #27A822 !important;
-        } */
 
-        /* 会议缩写：纯黑 + 加粗 + 去斜体 */
+        /* 2. 会议缩写：纯黑 + 加粗 + 去斜体 */
         p span,
         p span em,
         p span b {
@@ -49,7 +45,8 @@
             font-style: normal !important;
         }
 
-        /* Paper / Slides 链接：默认纯黑，悬停变绿，带细下划线（不影响大小） */
+
+        /* 3. Paper / Slides 附件链接：默认纯黑，悬停变绿，带细下划线 */
         p a {
             color: #000000;
             text-decoration: none;
@@ -61,25 +58,18 @@
             border-bottom-color: #27A822;
         }
 
-        /* 保证作者加粗正常 */
+
+        /* 4. 基础保障：确保强烈的作者加粗正常显示 */
         strong {
             font-weight: 700;
         }
 
-        /* 保持灰色会议日期不变 */
+        /* 保持灰色会议日期颜色 */
         p[style*="color: #808080"] {
             color: #808080;
         }
 
-        /* 链接访问后颜色保持黑色（悬停才变绿） */
-        a:visited {
-            color: #000000;
-        }
-        h5 a:visited {
-            color: #000000 !important;
-        }
-
-        /* 绿色装饰线不动 */
+        /* 保持主页绿色装饰线颜色 */
         h4[style*="color: #27A822"] {
             color: #27A822 !important;
         }

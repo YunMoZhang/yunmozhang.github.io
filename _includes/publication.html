@@ -1,58 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Yunmo Zhang</title>
+    <style>
+        /* ========== 全局重置 & 基础样式 ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            color: #111;
+            background-color: #fff;
+            padding: 2rem 1rem;
+        }
+
+        /* 十三列布局（与你主页风格保持一致） */
+        .thirteen.columns {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        article {
+            margin-bottom: 2rem;
+        }
+
+        h5 {
+            font-size: 1.1rem;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        /* 论文标题：保留绿色背景 + 下划线，同时让链接变成纯黑 + 加粗 */
+        h5 span[style*="background-color"] a,
+        h5 a {
+            color: #000000 !important;      /* 纯黑色 */
+            font-weight: bold !important;   /* 加粗 */
+            text-decoration: underline;     /* 与原有下划线风格统一 */
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+        }
+
+        /* 鼠标悬停时下划线变细或取消，保持可读性 */
+        h5 a:hover {
+            text-decoration: none;
+        }
+
+        /* 会议缩写：统一纯黑 + 加粗 + 去除斜体（如果是<em>） */
+        p span,
+        p span em,
+        p span b {
+            color: #000000 !important;
+            font-weight: bold !important;
+            font-style: normal !important;   /* 强制取消斜体 */
+        }
+
+        /* 确保作者列表中的加粗（自己的名字）依然有效 */
+        strong {
+            font-weight: 700;
+            color: #000;
+        }
+
+        /* 会议日期行（灰色部分）的普通文字颜色保持原样，但内部 span 已单独处理 */
+        p[style*="color: #808080"] {
+            color: #808080;
+        }
+
+        /* 论文链接（Paper / Slides）样式 —— 简洁、纯黑、悬浮有反馈 */
+        p a {
+            color: #000000;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        p a:hover {
+            border-bottom-color: #000;
+            color: #000;
+        }
+
+        /* color after visiting: keep black */
+        a:visited {
+            color: #000000;
+        }
+
+        /* hr line */
+        hr {
+            border: none;
+            border-top: 1px solid #27A822;
+            width: 100%;
+            margin: 0 0 20px 0;
+        }
+
+        /* keep original green title */
+        h4[style*="color: #27A822"] {
+            color: #27A822 !important;
+        }
+
+        /* mobile */
+        @media (max-width: 600px) {
+            .thirteen.columns {
+                padding: 0 16px;
+            }
+            h5 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
 <section class="thirteen columns">
     <h1>Publications</h1>
     <hr style="border: none; border-top: 1px solid #27A822; width: 100%; margin: 0px 0 20px 0;">
-     <h4 style="margin-bottom: 15px; color: #27A822;">Conference Proceedings</h4>
+    <h4 style="margin-bottom: 15px; color: #27A822;">Conference Proceedings</h4>
+
+    <!-- PACT 2025 -->
     <article>
-       
-           <!-- <h5><span style="background-color:  rgba(39, 168, 34, 0.06); text-decoration: underline;">ANG: Accelerating NFA processing on GPUs via Exploring Multi-Level Fine-Grained Parallelism</span></h5> -->
-           <h5><span style="background-color:  rgba(39, 168, 34, 0.06); text-decoration: underline;"><a href="https://ieeexplore.ieee.org/document/11282940"><b>ANG: Accelerating NFA processing on GPUs via Exploring Multi-Level Fine-Grained Parallelism</b></a></span></h5>  
-        <p>
-            Yuguang Wang, <strong>Yunmo Zhang</strong>, Zeyu Liu, Junqiao Qiu, Zhenlin Wang
-        </p>
-        <p style="color: #808080;">
-        International Conference on Parallel Architectures and Compilation Techniques (<span style="color: #000000;"><b>PACT</b></span>), 2025.
-        </p>
-        <!-- <p>[<a href="./assets/file/ANG_PACT25.pdf" target="_blank">Paper</a>] -->
-     </article>
-    <article>
-           <h5><span style="background-color:  rgba(39, 168, 34, 0.06); text-decoration: underline;"><a href="https://www.usenix.org/conference/atc25/presentation/zhang-yunmo">Inferring Likely Counting-related Atomicity Program Properties for Persistent Memory</a></span></h5>
-        <p>
-            <strong>Yunmo Zhang</strong>, Junqiao Qiu, Hong Xu, Chun Jason Xue
-        </p>
-        <p style="color: #808080;">
-        USENIX Annual Technical Conference (<span style="color: #000000;"><em>ATC</em></span>), 2025.
-        </p>
-        <p>[<a href="./assets/file/atc25-zhang-yunmo.pdf" target="_blank">Paper</a>] [<a href="./assets/file/atc25_slides-Yunmo.pdf"  target="_blank">Slides</a>]</p>
-     </article>
-    <article>
-        </p>
-            <h5><span style="background-color:  rgba(39, 168, 34, 0.06); text-decoration: underline;"><a href="https://dl.acm.org/doi/10.1145/3721145.3730419">PIE: Enabling Fast and Scalable Incremental Evolving Graph Analytics on Persistent Memory</a></span></h5>
-        <p>
-            <strong>Yunmo Zhang</strong>, Jiacheng Huang, Xizhe Yin, Junqiao Qiu, Hong Xu, Chun Jason Xue
-        </p>
-        <p style="color: #808080;">
-        ACM International Conference on Supercomputing (<span style="color: #000000;"><em>ICS</em></span>), 2025.
-        </p>
-        <p>[<a href="./assets/file/ICS25_PIE.pdf" target="_blank">Paper</a>] [<a href="./assets/file/ICS25_PIE_slides.pdf"  target="_blank">Slides</a>]</p>
+        <h5><span style="background-color: rgba(39, 168, 34, 0.06); text-decoration: underline;"><a href="https://ieeexplore.ieee.org/document/11282940"><b>ANG: Accelerating NFA processing on GPUs via Exploring Multi-Level Fine-Grained Parallelism</b></a></span></h5>
+        <p>Yuguang Wang, <strong>Yunmo Zhang</strong>, Zeyu Liu, Junqiao Qiu, Zhenlin Wang</p>
+        <p style="color: #808080;">International Conference on Parallel Architectures and Compilation Techniques (<span style="color: #000000;"><b>PACT</b></span>), 2025.</p>
     </article>
+
+    <!-- ATC 2025 -->
     <article>
-            <h5> <span style="background-color:  rgba(39, 168, 34, 0.06); text-decoration: underline;"><a href="https://dl.acm.org/doi/10.1145/3620666.3651377">More Apps, Faster Hot-Launch on Mobile Devices via Fore/Background-aware GC-Swap Co-design</a></span></h5>
-        <p>
-           Jiacheng Huang, <strong>Yunmo Zhang</strong>, Junqiao Qiu, Yu Liang, Rachata Ausavarungnirun, Qingan Li, Chun Jason Xue.
-        </p>
-        <p style="color: #808080;">
-        ACM International Conference on Architectural Support for Programming Languages and Operating Systems (<span style="color: #000000;">ASPLOS</span>), 2024.
-        </p>
-<!--         <p>[Paper]</p> -->
+        <h5><span style="background-color: rgba(39, 168, 34, 0.06); text-decoration: underline;"><a href="https://www.usenix.org/conference/atc25/presentation/zhang-yunmo">Inferring Likely Counting-related Atomicity Program Properties for Persistent Memory</a></span></h5>
+        <p><strong>Yunmo Zhang</strong>, Junqiao Qiu, Hong Xu, Chun Jason Xue</p>
+        <p style="color: #808080;">USENIX Annual Technical Conference (<span style="color: #000000;"><em>ATC</em></span>), 2025.</p>
+        <p>[<a href="./assets/file/atc25-zhang-yunmo.pdf" target="_blank">Paper</a>] [<a href="./assets/file/atc25_slides-Yunmo.pdf" target="_blank">Slides</a>]</p>
     </article>
+
+    <!-- ICS 2025 -->
     <article>
-            <h5><span style="background-color:  rgba(39, 168, 34, 0.06); text-decoration: underline;"><a href="https://ieeexplore.ieee.org/document/9940438">Probabilistic Analysis of Network Availability</a></span></h5>
-        <p>
-           <strong>Yunmo Zhang</strong>, Hong Xu, Chun Jason Xue and Tei-Wei Kuo.
-        </p>
-        <p style="color: #808080;">
-        IEEE International Conference on Network Protocol (<span style="color: #000000;"><em>ICNP</em></span>), 2022.
-        </p>
+        <h5><span style="background-color: rgba(39, 168, 34, 0.06); text-decoration: underline;"><a href="https://dl.acm.org/doi/10.1145/3721145.3730419">PIE: Enabling Fast and Scalable Incremental Evolving Graph Analytics on Persistent Memory</a></span></h5>
+        <p><strong>Yunmo Zhang</strong>, Jiacheng Huang, Xizhe Yin, Junqiao Qiu, Hong Xu, Chun Jason Xue</p>
+        <p style="color: #808080;">ACM International Conference on Supercomputing (<span style="color: #000000;"><em>ICS</em></span>), 2025.</p>
+        <p>[<a href="./assets/file/ICS25_PIE.pdf" target="_blank">Paper</a>] [<a href="./assets/file/ICS25_PIE_slides.pdf" target="_blank">Slides</a>]</p>
+    </article>
+
+    <!-- ASPLOS 2024 -->
+    <article>
+        <h5><span style="background-color: rgba(39, 168, 34, 0.06); text-decoration: underline;"><a href="https://dl.acm.org/doi/10.1145/3620666.3651377">More Apps, Faster Hot-Launch on Mobile Devices via Fore/Background-aware GC-Swap Co-design</a></span></h5>
+        <p>Jiacheng Huang, <strong>Yunmo Zhang</strong>, Junqiao Qiu, Yu Liang, Rachata Ausavarungnirun, Qingan Li, Chun Jason Xue.</p>
+        <p style="color: #808080;">ACM International Conference on Architectural Support for Programming Languages and Operating Systems (<span style="color: #000000;">ASPLOS</span>), 2024.</p>
+    </article>
+
+    <!-- ICNP 2022 -->
+    <article>
+        <h5><span style="background-color: rgba(39, 168, 34, 0.06); text-decoration: underline;"><a href="https://ieeexplore.ieee.org/document/9940438">Probabilistic Analysis of Network Availability</a></span></h5>
+        <p><strong>Yunmo Zhang</strong>, Hong Xu, Chun Jason Xue and Tei-Wei Kuo.</p>
+        <p style="color: #808080;">IEEE International Conference on Network Protocol (<span style="color: #000000;"><em>ICNP</em></span>), 2022.</p>
         <p>[<a href="./assets/file/icnp22_pita.pdf" target="_blank">Paper</a>] [<a href="./assets/file/ICNP22_Pita.pdf" target="_blank">Slides</a>]</p>
     </article>
 </section>
+</body>
+</html>

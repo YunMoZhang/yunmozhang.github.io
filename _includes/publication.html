@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +7,37 @@
     <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
     <title>Publications | Yunmo Zhang</title>
   <style>
-        /* ========== 覆盖样式 – 修复加粗、字号与悬停变色 ========== */
+        /* ========== Override Styles – Fix Bold, Font Size and Hover Color ========== */
 
-        /* 1. 论文标题外层 h5：强行负责加粗与字号放大，避开 a:visited 限制 */
+        /* 1. Paper title outer h5: force bold and enlarge font, avoid a:visited restrictions */
         h5 {
             font-weight: bold !important;
-            font-size: 18.5px !important;              /* 微调放大，拉开与下方正文的差距 */
-            line-height: 1.4 !important;               /* 优化多行标题的行间距 */
-            margin-bottom: 6px !important;             /* 标题与作者之间稍微留点空隙 */
+            font-size: 18.5px !important;              /* Fine-tune enlargement to create a gap with the text below */
+            line-height: 1.4 !important;               /* Optimize line spacing for multi-line titles */
+            margin-bottom: 6px !important;             /* Leave a small gap between title and authors */
             /* font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif */
             font-family: inherit;
             
-            margin-top: 6px !important;               /* 每一项论文顶部的间距 */
-            margin-bottom: 10px !important;             /* 标题与下面作者名字之间的距离（调大） */
+            margin-top: 6px !important;               /* Spacing at the top of each paper item */
+            margin-bottom: 10px !important;             /* Distance between title and author names below (increased) */
         }
 
-        /* 论文标题链接：纯黑、继承 h5 的加粗与字号 */
+        /* Paper title link: pure black, inherit bold and font size from h5 */
         h5 span[style*="background-color"] a,
         h5 a {
             color: #111111 !important;
-            text-decoration: none !important;           /* 去掉原来的粗下划线 */
-            border-bottom: 2px solid #ddd;           /* 细下划线，颜色纯黑 */
-            padding-bottom: 1px;                        /* 让下划线稍微贴近文字 */
+            text-decoration: none !important;           /* Remove the original thick underline */
+            border-bottom: 2px solid #ddd;           /* Thin underline, pure black color */
+            padding-bottom: 1px;                        /* Keep the underline close to the text */
         }
         
-        /* 即使链接被点击访问过，也确保颜色纯黑 */
+        /* Ensure pure black color even if the link has been visited */
         h5 span[style*="background-color"] a:visited,
         h5 a:visited {
             color: #000000 !important;
         }
 
-        /* 【修复核心】提高悬停权重：文字和下划线在悬停时完美变绿 */
+        /* 【Core Fix】Increase hover weight: text and underline turn green perfectly on hover */
         h5 span[style*="background-color"] a:hover,
         h5 a:hover {
             color: #27A822 !important;
@@ -46,13 +46,13 @@
 
         article p {
             margin-top: 0 !important;
-            margin-bottom: 10px !important;            /* 加大作者、会议、Paper/Slides 彼此之间的行间距 */
+            margin-bottom: 10px !important;            /* Increase line spacing between authors, conference, Paper/Slides */
         }
         article p:last-child {
-            margin-bottom: 25px !important;            /* 加大两篇不同论文（大模块）之间的总间距，保持结构清晰 */
+            margin-bottom: 25px !important;            /* Increase total spacing between two different papers (large modules) to keep structure clear */
         }
 
-        /* 2. 会议缩写：纯黑 + 加粗 + 去斜体 */
+        /* 2. Conference abbreviation: pure black + bold + remove italic */
         p span,
         p span em,
         p span b {
@@ -62,7 +62,7 @@
         }
 
 
-        /* 3. Paper / Slides 附件链接：默认纯黑，悬停变绿，带细下划线 */
+        /* 3. Paper / Slides attachment links: default pure black, green on hover, with thin underline */
         p a {
             color: #111111;
             text-decoration: none;
@@ -75,17 +75,17 @@
         }
 
 
-        /* 4. 基础保障：确保强烈的作者加粗正常显示 */
+        /* 4. Basic guarantee: ensure strong author bold displays normally */
         strong {
             font-weight: 700;
         }
 
-        /* 保持灰色会议日期颜色 */
+        /* Keep gray conference date color */
         p[style*="color: #808080"] {
             color: #808080;
         }
 
-        /* 保持主页绿色装饰线颜色 */
+        /* Keep homepage green decorative line color */
         h4[style*="color: #27A822"] {
             color: #27A822 !important;
         }
@@ -108,7 +108,7 @@
         <h5><span style="background-color: rgba(39, 168, 34, 0.06); "><a href="https://www.usenix.org/conference/osdi26/presentation/zhang-yunmo">Efficient GPU-Centric Evolving Graph Processing at Scale</a></span></h5>
         <p><strong>Yunmo Zhang</strong>, Jiacheng Huang, Xizhe Yin, Junqiao Qiu, Hong Xu, Chun Jason Xue</p>
         <p style="color: #808080;">Accepted by 20th USENIX Symposium on Operating Systems Design and Implementation (<span style="color: #000000;"><b>OSDI</b></span>), 2026 (To appear).</p>
-        <a href="https://github.com/YunMoZhang/POEGA" target="_blank"><i class="fa-solid fa-code"></i> code</a></p>
+        <p><a href="https://github.com/YunMoZhang/POEGA" target="_blank"><i class="fa-solid fa-code"></i> code</a></p>
     </article>
    
 

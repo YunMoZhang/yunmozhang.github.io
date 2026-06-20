@@ -42,6 +42,11 @@
             border-left: 3px solid #e0e0e0;           /* Thin, light vertical line on the left */
             padding-left: 16px;                        /* Space between the line and the text */
             margin-bottom: 0;                          /* Keep consistent spacing */
+            transition: border-left-color 0.2s ease;   /* Smooth color transition on hover */
+        }
+
+        article.lined:hover {
+            border-left-color: #27A822;                /* Turn green on hover, like publication title */
         }
 
         article p {
@@ -56,7 +61,7 @@
         p span,
         p span em,
         p span b {
-            color: #27A822 !important;
+            color: #1e8a1e !important;
             font-weight: bold;
             font-style: normal !important;
         }
